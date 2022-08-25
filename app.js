@@ -5,7 +5,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const lodash = require('lodash');
-const { compose } = require("@reduxjs/toolkit");
+
 const mongoose = require("mongoose");
 
 //connecting the mongodb server local as of now 
