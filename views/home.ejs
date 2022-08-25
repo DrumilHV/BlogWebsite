@@ -1,0 +1,29 @@
+<%- include("partial/header.ejs") -%>
+  <h1>Home</h1>
+
+  <p>
+    <%= homeStartingContentEjs%>
+  </p>
+  <hr>
+  <!-- <% for(let i=0 ;i < postsArray.length; i++) { %>
+    <div class="media">
+    <div class="media-body">
+      <h5 class="mt-0"><%= postsArray[i].title %> </h5>
+      <!-- <p><%= postsArray[i].body %></p> -->
+  <!-- </div>
+</div>
+<% } %>  -->
+  <% postsArray.forEach(function(post){%>
+    <h1>
+      <%= post.postTitle %>
+    </h1>
+
+    <p>
+      <%= post.postBody.substring(0,100) + " ..." %> <a href="/post/<%= post.postTitle%>/<%=post._id%>" id="requestId"
+        name="requestId" value="<%=post._id %>" > Read more</a>
+    </p>
+
+
+
+    <%})%>
+      <%- include("partial/footer.ejs") -%>
