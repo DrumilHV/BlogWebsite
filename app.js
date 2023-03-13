@@ -10,8 +10,9 @@ const mongoose = require("mongoose");
 
 //connecting the mongodb server local as of now 
 // mongoose.connect("mongodb://localhost:27017/posts", { useNewUrlParser: true });
-mongoose.connect("mongodb+srv://drumil:test-123@cluster0.uozmspq.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true });
+// mongoose.connect("mongodb+srv://drumil:test-123@cluster0.uozmspq.mongodb.net/blogs?retryWrites=true&w=majority", { useNewUrlParser: true });
 
+mongoose.connect("mongodb+srv://drumilhved:test-123@blogwebsitold.dc9f3th.mongodb.net/test", { useNewUrlParser: true });
 // some more setting up of the requred variables
 
 const app = express();
@@ -115,6 +116,6 @@ if (port == null || port == "") {
 
 app.listen(port, function () {
 
-  console.log("Server started on Server!");
+  console.log("Server started on ",port,"!");
 
 });
